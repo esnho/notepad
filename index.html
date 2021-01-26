@@ -1,0 +1,14 @@
+<script type="text/javascript">
+window.onload = () => {
+const text = document.getElementById("editor");
+const savedText = localStorage.getItem("savedText");
+text.value = savedText;
+text.addEventListener("input", (e) => {
+  const value = e.target.value;
+  localStorage.setItem("savedText", value);
+});
+}
+</script>
+
+<textarea id="editor" name="editor" style="width:100%;height:100%">
+</textarea>
